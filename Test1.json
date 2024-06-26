@@ -1,0 +1,11 @@
+{
+    "deviceName": "emulator-5554",
+    "platformVersion": "11",
+    "platformName": "Android",
+    "appPackage": "com.material.components",
+    "appActivity": "com.material.components.activity.MainMenu",
+    "automationName": "UiAutomator2",
+    "newCommandTimeout": 600,
+    "uiautomator2ServerInstallTimeout": 20000,
+    "uiautomator2ServerLaunchTimeout": 20000
+  }

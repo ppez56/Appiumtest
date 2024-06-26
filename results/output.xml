@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-06-26T10:31:09.571116" rpa="false" schemaversion="5">
+<suite id="s1" name="Appiumtest" source="/Users/peempeem/Documents/GitHub/Appiumtest">
+<suite id="s1-s1" name="Ep2 Live" source="/Users/peempeem/Documents/GitHub/Appiumtest/ep2_live.robot">
+<test id="s1-s1-t1" name="Open Test Application For android" line="7">
+<kw name="Open Test Application">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${appium_server}</arg>
+<arg>platformName=${platform_name}</arg>
+<arg>deviceName=${device_name}</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<arg>automationName=${automation_name}</arg>
+<arg>newCommandTimeout=630000</arg>
+<arg>avdArg=${avd_args}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-06-26T10:31:09.640371" elapsed="4.564822"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T10:31:24.208586" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T10:31:14.205801" elapsed="10.003694"/>
+</kw>
+<status status="PASS" start="2024-06-26T10:31:09.640061" elapsed="14.570012"/>
+</kw>
+<kw name="Close Popup When App Start">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-26T10:31:24.294013" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<arg>id=com.material.components:id/bt_close</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-26T10:31:24.213165" elapsed="0.081331"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-26T10:31:24.297539" level="INFO">Clicking element 'id=com.material.components:id/bt_close'.</msg>
+<msg time="2024-06-26T10:31:24.367817" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<arg>id=com.material.components:id/bt_close</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-26T10:31:24.294834" elapsed="0.073562"/>
+</kw>
+<status status="PASS" start="2024-06-26T10:31:24.212015" elapsed="0.156670"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>android=UiSelector().className("android.widget.TextView").text("Cards")</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-26T10:31:24.369130" elapsed="0.574767"/>
+</kw>
+<kw name="Click Search Icon On Topbar">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>accessibility_id=Search</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-26T10:31:24.946660" elapsed="0.039045"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-26T10:31:24.989198" level="INFO">Clicking element 'accessibility_id=Search'.</msg>
+<arg>accessibility_id=Search</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-26T10:31:24.986475" elapsed="0.773021"/>
+</kw>
+<status status="PASS" start="2024-06-26T10:31:24.944745" elapsed="0.815306"/>
+</kw>
+<kw name="Input Search Keyword Into Search Box">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-26T10:31:25.821044" level="INFO">criteria is com.material.components:id/search_src_text</msg>
+<arg>id=com.material.components:id/search_src_text</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-26T10:31:25.761412" elapsed="0.059903"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-06-26T10:31:25.824088" level="INFO">Typing text 'Icon' into text field 'id=com.material.components:id/search_src_text'</msg>
+<msg time="2024-06-26T10:31:26.625894" level="INFO">criteria is com.material.components:id/search_src_text</msg>
+<arg>id=com.material.components:id/search_src_text</arg>
+<arg>${kw}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-06-26T10:31:25.821565" elapsed="0.804866"/>
+</kw>
+<arg>Icon</arg>
+<status status="PASS" start="2024-06-26T10:31:25.760590" elapsed="0.866122"/>
+</kw>
+<kw name="Click Bottom Navigation Icon Menu">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-26T10:31:27.415918" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text='Bottom Navigation'] and android.widget.TextView[@text='Icon']]</msg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text='Bottom Navigation'] and android.widget.TextView[@text='Icon']]</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-26T10:31:26.628071" elapsed="0.788381"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-26T10:31:27.419684" level="INFO">Clicking element 'xpath=//android.widget.LinearLayout[android.widget.TextView[@text='Bottom Navigation'] and android.widget.TextView[@text='Icon']]'.</msg>
+<msg time="2024-06-26T10:31:27.502440" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text='Bottom Navigation'] and android.widget.TextView[@text='Icon']]</msg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text='Bottom Navigation'] and android.widget.TextView[@text='Icon']]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-26T10:31:27.417087" elapsed="0.085894"/>
+</kw>
+<status status="PASS" start="2024-06-26T10:31:26.627252" elapsed="0.876022"/>
+</kw>
+<status status="PASS" start="2024-06-26T10:31:09.639710" elapsed="17.864536"/>
+</test>
+<status status="PASS" start="2024-06-26T10:31:09.580780" elapsed="17.924923"/>
+</suite>
+<status status="PASS" start="2024-06-26T10:31:09.572937" elapsed="17.934547"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Appiumtest">Appiumtest</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Ep2 Live">Appiumtest.Ep2 Live</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
